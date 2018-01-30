@@ -38,27 +38,37 @@
 <body class="container">
     <h1>{{handicap.message}}</h1>
 
-    <div data-ng-controller="TeamController as team">
-        <h2>Add a Team</h2>
-        <form data-ng-submit="handicap.myFunc()">
-            <label>
-                Team Name
-                <input type="text" name="Team Name" data-ng-model="teamName" />
-            </label>
+    <div class="teams-container" data-ng-controller="TeamController as team">
+        <div class="teams-add">
 
-            {{teamName}}
-            <label>
-                Player 1 Name
-                <input type="text" name="Player 1 Name" data-ng-model="player1Name"/>
-            </label>
+            <h2>Add a Team</h2>
+            <form data-ng-submit="team.createTeam()">
+                <label>
+                    Team Name
+                    <input type="text" name="Team Name" data-ng-model="team.name" />
+                </label>
 
-            <label>
-                Player 2 Name
-                <input type="text" name="Player 2 Name" data-ng-model="player2Name" />
-            </label>
+                <label>
+                    Player 1 Name
+                    <input type="text" name="Player 1 Name" data-ng-model="team.player1Name" />
+                </label>
 
-            <button type="submit" class="btn-primary">Add Team</button>
-        </form>
+                <label>
+                    Player 2 Name
+                    <input type="text" name="Player 2 Name" data-ng-model="team.player2Name" />
+                </label>
+
+                <button type="submit" class="btn-primary">Add Team</button>
+            </form>
+        </div>
+
+        
+        <ul class="teams-list">
+            <li data-ng-repeat="team in team.teams">
+                {{team.name}}
+            </li>
+
+        </ul>
     </div>
 
     <div data-ng-controller="HandicapController as handicap">

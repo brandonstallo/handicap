@@ -12,9 +12,6 @@
         return {
             getTeams: getTeams,
         }
-
-        function getTeams() {
-
-        }
+        
     }
 })();

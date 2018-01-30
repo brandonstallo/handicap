@@ -45,3 +45,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+form {
+  transition: all linear 0.5s;
+  background: transparent;
+  /*&.ng-invalid {
+        background: red;
+    }*/ }
+
+input, button {
+  display: block; }
+
