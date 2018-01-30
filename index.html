@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="handicapApp">
+<head>
+
+    <link href="content/styles/css/styles.min.css" rel="stylesheet" />
+    <link href="content/styles/css/bootstrap.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>-->
+    <script src="content/script/angular/angular.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBMbXX6RWQRhtAZ8CD9kui--DGcV9LxxB4",
+            authDomain: "smgc-1487256758030.firebaseapp.com",
+            databaseURL: "https://smgc-1487256758030.firebaseio.com",
+            projectId: "smgc-1487256758030",
+            storageBucket: "smgc-1487256758030.appspot.com",
+            messagingSenderId: "401455718840"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="content/script/app.js"></script>
+    <script src="content/script/controller/teams-controller.js"></script>
+    <script src="content/script/controller/handicap-controller.js"></script>
+
+
+</head>
+<body class="container">
+    <h1>{{handicap.message}}</h1>
+
+    <div data-ng-controller="TeamController as team">
+        <h2>Add a Team</h2>
+        <form data-ng-submit="handicap.myFunc()">
+            <label>
+                Team Name
+                <input type="text" name="Team Name" data-ng-model="teamName" />
+            </label>
+
+            {{teamName}}
+            <label>
+                Player 1 Name
+                <input type="text" name="Player 1 Name" data-ng-model="player1Name"/>
+            </label>
+
+            <label>
+                Player 2 Name
+                <input type="text" name="Player 2 Name" data-ng-model="player2Name" />
+            </label>
+
+            <button type="submit" class="btn-primary">Add Team</button>
+        </form>
+    </div>
+
+    <div data-ng-controller="HandicapController as handicap">
+
+
+        <div data-ng-show="handicap.isTeamSelected === true">
+            <h2>Team Info</h2>
+            <h3>Name: {{handicap.selectedTeam.name}}</h3>
+            <h3>Handicap: {{handicap.selectedTeam.handicap}}</h3>
+            <h3>Player 1: {{handicap.selectedTeam.player1}}</h3>
+            <h3>Player 2: {{handicap.selectedTeam.player2}}</h3>
+            <div>
+                <h3>Scores</h3>
+                <ul>
+                    <li data-ng-repeat="score in handicap.selectedTeam.scores track by $index">{{score}} <a>Edit</a><a>Delete</a></li>
+                </ul>
+            </div>
+            <a href="#" data-ng-click="handicap.enterNewScore()">Enter New Score</a>
+        </div>
+
+        <div data-ng-show="handicap.enterNewScore == true">
+            <!--<h2>Enter Score</h2>
+
+            <h3>Select Course</h3>
+            <select>
+                <option>Salisbury Golf Course</option>
+            </select>
+
+
+            <h3>Select Week</h3>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>-->
+            <form name="EnterScore" data-ng-submit="handicap.submitScore(handicap.holes, handicap.selectedTeam)">
+                <table>
+                    <thead>
+                        <tr>
+                            <td data-ng-repeat="hole in handicap.holes">{{hole.name}}</td>
+                        </tr>
+                        <tr>
+                            <td data-ng-repeat="hole in handicap.holes">{{hole.yardage}}</td>
+                        </tr>
+                        <tr>
+                            <td data-ng-repeat="hole in handicap.holes">{{hole.par}}</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-ng-repeat="hole in handicap.holes">
+                                <input data-ng-change="handicap.calculateTotal(hole); handicap.scoreToPar(hole)" required name="Hole {{hole.name}}" data-ng-model="hole.score" type="text" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>
+                    Total Score:
+                    <span>{{handicap.calculateTotal(handicap.holes)}}</span>
+                </h3>
+
+                <h3>
+                    Score to Par:
+                    <span>{{handicap.scoreToPar(handicap.holes)}}</span>
+                </h3>
+                <input type="submit" id="submit" value="Submit Score" />
+
+            </form>
+
+
+
+            <button data-ng-click="handicap.calculateHandicap(handicap.selectedTeam)">Calculate Handicap</button>
+            <h3>New Handicapss: <span id="id"></span></h3>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
