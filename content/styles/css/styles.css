@@ -55,3 +55,21 @@ form {
 input, button {
   display: block; }
 
+.fake-button {
+  background: 0;
+  border: 0;
+  display: inline-block; }
+  .fake-button:hover {
+    text-decoration: underline; }
+
+.team-list-item {
+  margin: .5em; }
+
+.team-name {
+  font-size: 1.25em;
+  text-align: left;
+  width: 85%; }
+
+.team-remove:hover {
+  color: gray; }
+
