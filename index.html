@@ -44,7 +44,6 @@
 </head>
 <body class="container">
     <h1>{{handicap.message}}</h1>
-
     <div class="teams-container" data-ng-controller="TeamController as team">
         <div class="teams-add">
 
@@ -100,16 +99,15 @@
             <div class="team-scores">
                 <h3>Scores</h3>
                 <ul>
-                    <li data-ng-repeat="score in team.selectedTeam.scores track by $index">Week {{$index + 1}} - {{score}}<a>Edit</a><a>Delete</a></li>
+                    <li data-ng-repeat="score in team.selectedTeam.scores">
+                        Week {{$index + 1}} - {{score}}
+                        <button data-ng-click="team.deleteScore($index)" class="team-remove fake-button">
+                            <i title="Remove Score" class="fa fa-trash"></i></button>
+                    </li>
                 </ul>
             </div>
             <a href="#" data-ng-click="team.enterNewScore()">Enter New Score</a>
         </div>
-
-
-
-
-
 
         <div data-ng-show="team.enterNewScore == true">
             <!--<h2>Enter Score</h2>
@@ -118,7 +116,6 @@
             <select>
                 <option>Salisbury Golf Course</option>
             </select>
-
 
             <h3>Select Week</h3>
             <select>
@@ -158,6 +155,7 @@
                 <h3>
                     Total Score:
                     <!--<span>{{handicap.calculateTotal(handicap.holes)}}</span>-->
+                    
                     <input type="tel" data-ng-model="team.totalScore" />
 
                     {{team.totalScore}}

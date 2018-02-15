@@ -7,34 +7,21 @@
 
     TeamController.$inject = ['TeamService', '$firebaseArray', '$firebaseObject'];
 
-    function TeamController(
-        TeamService,
-        $firebaseArray,
-        $firebaseObject) {
+    function TeamController(TeamService, $firebaseArray, $firebaseObject) {
         var vm = this;
         var ref = firebase.database().ref();
         vm.teams = $firebaseArray(ref.child('teams'));
-        vm.scores = $firebaseArray(ref.child('scores'));
         vm.isTeamSelected = false;
-        vm.getTeams = getTeams;
         vm.createTeam = createTeam;
         vm.removeTeam = removeTeam;
         vm.populateTeamInfo = populateTeamInfo;
         vm.enterNewScore = enterNewScore;
         vm.submitScore = submitScore;
+        vm.deleteScore = deleteScore;
 
         activate();
 
- 
-
         function activate() {
-         
-        }
-
-
-        function getTeams() {
-            console.log('get teams');
-
         }
 
         function createTeam() {
@@ -75,6 +62,7 @@
         function populateTeamInfo(team) {
             vm.isTeamSelected = true;
             vm.selectedTeam = team;
+        }
 
         function enterNewScore() {
             vm.enterNewScore = true;
@@ -82,12 +70,71 @@
 
         function submitScore(score) {
 
+
             var teamID = vm.selectedTeam.$id
-            var list = $firebaseArray(ref.child('teams/' + teamID + '/scores'));
+            var teamScores = $firebaseArray(ref.child('teams/' + teamID + '/scores'));
             var newScore = parseInt(score);
 
-            list.$add(newScore);
+            teamScores.$add(newScore);
 
         }
+
+        function deleteScore(index) {
+            console.log(list);
+            var list = [];
+            ref.on('value', function(snap) { list = snap.val(); });
+            console.log(list);
+
+
+
+
+            //var teamScores = $firebaseArray(ref.child('teams/' + teamID + '/scores'));
+            //console.log(index);
+            //var teamID = vm.selectedTeam.$id
+
+            //var list = $firebaseArray(ref.child('teams/' + teamID + '/scores'));
+            //console.log(list)
+
+            //var item = list[index];
+
+
+            //console.log(teamID);
+
+            //var team = $firebaseArray(ref.child('teams/' + teamID));
+
+            //console.log(team);
+
+
+
+            //console.log(teamScores);
+
+
+            //teamScores.$remove(index)
+
+            //var teamScores = Object.values(vm.selectedTeam.scores);
+            //console.log(deletedScore);
+            //console.log(scoreID);
+            //console.log(score);
+            //console.log(vm.teams)
+            //console.log(vm.selectedTeam);
+            //console.log(teamScores);
+
+            //console.log(Object.values(teamScores));
+            //console.log(teamScores.indexOf(score));
+
+
+            //console.log(teamID);
+
+            //var list = $firebaseArray(ref.child('teams/' + teamID + '/scores'));
+            //var deletedScoreID = score.$id;
+
+            //var deletedScore = list.indexOf(score);
+
+            //console.log(list);
+            //console.log(deletedScoreID);
+
+            //console.log(deletedScore);
+        }
+
     }
 }());
