@@ -1,65 +1,235 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+﻿<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Salisbury Golf Course">
+    <meta name="description" content="Salisbury Golf Course is great 9 hole public golf course located in Salisbury, MO.">
+    <meta name="keywords" content="Salisbury, Municipal, Missouri, Golf, Golf Course, Course, 9-Hole, Tournaments" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#475c29">
+    <meta name="msvalidate.01" content="42EB9BC4B6636EB5F67CFCB4904AB07E" />
+    <meta itemprop="email" content="salisburygolfcourse@gmail.com">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/4.9.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/4.9.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/4.9.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/4.9.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/4.9.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <link rel="canonical" href="https://www.salisburygolfcourse.com/">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+
+    <title>Salisbury Golf Course</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">-->
+
+    <meta property="og:title" content="Salisbury Golf Course" />
+    <meta property="og:type" content="business.business" />
+    <meta property="og:image" content="https://www.salisburygolfcourse.com/images/7-wide.jpg" />
+    <meta property="og:url" content="https://www.salisburygolfcourse.com" />
+    <meta property="og:description" content="Salisbury Golf Course, located in Salisbury, MO, is a 9-Hole, Par 35 public Golf Course measuring nearly 3,000 yards from the back tees." />
+    <meta property="fb:app_id" content="203721476689941" />
+    <meta property="business:contact_data:street_address" content="35593 Potts Park Rd" />
+    <meta property="business:contact_data:locality" content="Salisbury" />
+    <meta property="business:contact_data:region" content="MO" />
+    <meta property="business:contact_data:postal_code" content="65281" />
+    <meta property="business:contact_data:country_name" content="United States" />
+    <meta property="business:contact_data:email" content="salisburygolfcourse@gmail.com" />
+    <meta property="business:contact_data:phone_number" content="1-660-388-5721" />
+    <meta property="business:contact_data:website" content="https://www.salisburygolfcourse.com" />
+    <meta property="place:location:latitude" content="39.398679" />
+    <meta property="place:location:longitude" content="-92.806975" />
+
+    <!--[if IE]> <link rel="shortcut icon" sizes="16x16 32x32 48*48 64x64" href="https://www.salisburygolfcourse.com/content/images/icon-square.png"><![endif]-->
+    <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <meta name="msapplication-TileColor" content="#475c29">
+    <meta name="msapplication-TileImage" content="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+
+    <link rel="apple-touch-icon-precomposed" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <link rel="apple-touch-icon" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.salisburygolfcourse.com/content/images/icon-square.png96x96">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.salisburygolfcourse.com/content/images/icon-square144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@salisbury_golf">
+    <meta name="twitter:title" content="Salisbury Golf Course">
+    <meta name="twitter:description" content="Salisbury Golf Course, located in Salisbury, MO, is a 9-Hole, Par 35 public Golf Course measuring nearly 3,000 yards from the back tees.">
+    <meta name="twitter:image" content="https://www.salisburygolfcourse.com/content/images/7-square.jpg">
+
+
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Salisbury Golf Course">
+    <link rel="icon" sizes="192x192" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#475c29">
+    <meta name="apple-mobile-web-app-title" content="Salisbury Golf Course">
+    <link rel="apple-touch-icon" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="https://www.salisburygolfcourse.com/content/images/icon-square.png">
+    <meta name="msapplication-TileColor" content="#475c29">
+    
+    
+    <style media="all">
     </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <!--PRODUCTION ANGULAR-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+
+    <!--DEVELOPMENT ANGULAR-->
+    <!--<script src="content/scripts/angular/angular.min.js"></script>-->
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBMbXX6RWQRhtAZ8CD9kui--DGcV9LxxB4",
+            authDomain: "smgc-1487256758030.firebaseapp.com",
+            databaseURL: "https://smgc-1487256758030.firebaseio.com",
+            projectId: "smgc-1487256758030",
+            storageBucket: "smgc-1487256758030.appspot.com",
+            messagingSenderId: "401455718840"
+        };
+        firebase.initializeApp(config);
     </script>
-  </body>
+
+    <!--Firebase defaults COME BACK TO THESE -->
+    <!-- update the version number as needed -->
+    <!--<script defer src="/__/firebase/4.9.1/firebase-app.js"></script>-->
+    <!-- include only the Firebase features as you need -->
+    <!--<script defer src="/__/firebase/4.9.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.9.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.9.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.9.1/firebase-storage.js"></script>-->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!--<script defer src="/__/firebase/init.js"></script>-->
+
+
+    <link href="content/css/styles.min.css" rel="stylesheet" />
+    <link href="content/css/font-awesome/fontawesome.min.css" rel="stylesheet" />
+    <link href="content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/font-awesome/fontawesome-all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div itemscope itemtype="https://schema.org/LocalBusiness" class="container" data-main-content>
+        <header>
+            <div class="nav-icon" data-nav-icon>Menu</div>
+            <a itemprop="url" href="/">
+                <img itemprop="logo" class="logo" src="https://www.salisburygolfcourse.com/content/images/logo.png" alt="Salisbury Golf Course Logo" title="Salisbury Golf Course Logo" />
+            </a>
+            <h1>
+                <a href="/">Salisbury Golf Course</a>
+            </h1>
+        </header>
+        <nav class="primary-nav" data-primary-nav="">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="driving-directions.html">Directions</a></li>
+                <li><a href="rates.html">Rates &amp; Fees</a></li>
+                <li><a href="scorecard.html">Scorecard</a></li>
+                <li><a href="current-weather.html">Weather</a></li>
+            </ul>
+
+        </nav>
+        <main tabindex="-1" class="l-main-content">
+            <div class="l-text-content">
+                <p>
+                    The <span itemprop="name">Salisbury Golf Course</span>, a 9-Hole, Par 35 Course measuring nearly 3,000 yards from the back tees, has been challenging golfers since it opened in <span itemprop="foundingDate">1983</span>. It boasts beautiful fairways, elevated greens, and a variety of tees which provide a challenge for all skill levels. We are open to the public and no tee times are necessary.
+                </p>
+                <p>
+                    In addition to a beautiful round of golf, visitors can also take advantage of our driving range, practice putting green, and newly renovated, full amenity clubhouse.
+                </p>
+            </div>
+
+            <aside class="latest-news">
+
+                <!--<<h3>Upcoming Events</h3>
+                   ul class="latest-news-list">
+                    <li itemscope itemtype="https://scema.org/Event">
+                        <time itemprop="starteDate" datetime="2016-08-13" class="latest-news-heading">August 13th</time>
+                        <span itemprop="name">CCCF 2 Person Scramble</span>
+                        <a itemprop="url" class="latest-news-details" target="_blank" href="pdf/CCCF-2-Man-Flyer-2016.pdf">View Details</a>
+                    </li>
+
+                    <li itemscope itemtype="https://scema.org/Event">
+                        <time itemprop="starteDate" datetime="2016-08-20" class="latest-news-heading">August 20th</time>
+                        <span itemprop="name">Glasgow Fireman's 2 Person Scramble</span>
+                        <a itemprop="url" class="latest-news-details" href="pdf/Glasgow-Firemans-Golf-Tournament-2016.pdf" target="_blank">View Details</a>
+                    </li>
+                </ul> -->
+            </aside>
+        </main>
+    </div>
+    <footer>
+        <nav class="secondary-nav" data-secondary-nav>
+            <ul>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="driving-directions.html">Directions</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-media-container">
+            <h5>Find Us On Social Media</h5>
+            <a class="social-media" target="_blank" href="https://www.facebook.com/SalisburyGolfCourse/">
+                <img class="social-media-icon facebook" src="/content/images/facebook-icon.png" alt="Like Us On Facebook" title="Like Us On Facebook" />
+            </a>
+            <a class="social-media" target="_blank" href="https://twitter.com/salisbury_golf">
+                <img class="social-media-icon twitter" src="/content/images/twitter-icon.png" alt="Follow Us On Twitter" title="Follow Us On Twitter" />
+            </a>
+        </div>
+
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="course-info">
+            <span class="course-info-name">Salisbury Golf Course</span>
+            <span itemprop="streetAddress" class="course-info-street">35593 Potts Park Rd.</span>
+            <span itemprop="addressLocality" class="course-info-city">Salisbury,&nbsp;</span>
+            <span itemprop="addressRegion" class="course-info-state">MO&nbsp;</span>
+            <span itemprop="postalCode" class="course-info-zip">65281</span>
+            <a itemprop="telephone" href="tel:1-660-388-5721" class="course-info-phone">(660) 388-5721</a>
+        </div>
+        <small>
+            Copyright &copy;
+            <script>
+                var d = new Date();
+                var currentYear = d.getFullYear();
+                document.write(currentYear);
+
+            </script> Salisbury Golf Course
+        </small>
+    </footer>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-79623537-1', 'auto');
+            ga('send', 'pageview');
+
+    </script>
+</body>
 </html>

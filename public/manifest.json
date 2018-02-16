@@ -1,0 +1,37 @@
+{
+  "short_name": "Salisbury Golf Course",
+  "name": "Salisbury Golf Course",
+  "description": "Salisbury Golf Course, located in Salisbury, MO, is a 9-Hole, Par 35 public Golf Course measuring nearly 3,000 yards from the back tees.",
+  "icons": [
+    {
+      "src": "https://www.salisburygolfcourse.com/content/images/icon-square32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.salisburygolfcourse.com/content/images/icon-square96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.salisburygolfcourse.com/content/images/icon-square144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.salisburygolfcourse.com/content/images/icon-square360x360.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.salisburygolfcourse.com/content/images/icon-square512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#475c29",
+  "background_color": "#fff",
+  "orientation": "any",
+  "display": "standalone"
+}
