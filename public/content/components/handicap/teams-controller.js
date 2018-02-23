@@ -14,7 +14,7 @@
         var ref = firebase.database().ref();
         vm.teams = $firebaseArray(ref.child('teams'));
         vm.scores = $firebaseArray(ref.child('scores'));
-        vm.isTeamSelected = false;
+        vm.isTeamSelected = false;      
         vm.getTeams = getTeams;
         vm.createTeam = createTeam;
         vm.removeTeam = removeTeam;

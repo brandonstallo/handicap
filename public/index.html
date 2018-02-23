@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!-- define angular app -->
-<html ng-app="app" lang="en" itemscope itemtype="https://schema.org/WebPage">
+<html ng-app="app" lang="en" itemscope itemtype="https://schema.org/WebPage" data-ng-controller="MainController as main" data-ng-cloak>
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,6 @@
 
     <link rel="canonical" href="https://www.salisburygolfcourse.com/">
 
-    <title>Salisbury Golf Course</title>
 
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -89,9 +88,10 @@
 
     <script src="content/scripts/app.js"></script>
     <script src="content/scripts/app-routes.js"></script>
+    <script src="content/scripts/controller/mainController.js"></script>
+    <script src="content/components/home/home-controller.js"></script>
 
-
-
+    <title ng-bind="pageTitle + ' | Salisbury Golf Course'"></title>
 
     <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
@@ -138,9 +138,9 @@
             <a itemprop="url" href="/">
                 <img itemprop="logo" class="logo" src="https://www.salisburygolfcourse.com/content/images/logo.png" alt="Salisbury Golf Course Logo" title="Salisbury Golf Course Logo" />
             </a>
-            <!--<h1>
+            <h1>
                 <a href="/">Salisbury Golf Course</a>
-            </h1>-->
+            </h1>
         </header>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -156,8 +156,8 @@
             </div>
         </nav>
     </div>
-    <main tabindex="-1" class="l-main-content">
-        <div ng-view class=""></div>
+    <main tabindex="-1" class="l-main-content" data-ng-view>
+
     </main>
 
     <footer>
