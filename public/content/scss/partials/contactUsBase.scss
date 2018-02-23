@@ -1,0 +1,12 @@
+@import "mixins";
+@import "../themes/darkGreenTheme";
+
+
+.supernova, .jotform-form {
+    background-color: $base !important;
+}
+
+.form-all {
+    border: none;
+    box-shadow: none;
+}

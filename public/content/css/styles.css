@@ -58,7 +58,7 @@ table {
 /* Footer */
 body {
   box-sizing: border-box;
-  color: #383A42;
+  color: pink;
   font: 400 1em/1.475 "Proxima Nova Regular", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   position: relative; }
   body.is-open {
@@ -94,20 +94,20 @@ body {
         margin: 1em 35%;
         width: 30%; } }
 
-.container {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transition: left 0.5s ease-out;
-  -moz-transition: left 0.5s ease-out;
-  -o-transition: left 0.5s ease-out;
-  transition: left 0.5s ease-out; }
-  @media (max-width: 48em) {
-    .container.is-hidden {
-      left: 244px; } }
+/*.container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include transition(left 0.5s ease-out);
 
+    &.is-hidden {
+        @media (max-width: $break-medium) {
+            left: 244px;
+        }
+    }
+}*/
 header {
   background: #31561f;
   padding: .5em;
@@ -496,4 +496,175 @@ footer {
 .rates {
   margin: 2em auto;
   max-width: 950px; }
+
+/*.ng-enter {
+    animation: all 10.25s ease-in;
+}
+
+.ng-leave {
+    animation: all 10.25s ease-out;
+}*/
+/* Shared */
+/* Header */
+/*$tertiary: #1D241F;*/
+/* Footer */
+.nav-icon {
+  display: none; }
+  @media (max-width: 48em) {
+    .nav-icon {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.4em;
+      line-height: 1.3;
+      margin-left: .25em;
+      padding-left: 1.25em;
+      position: relative;
+      text-indent: -999em; } }
+  @media (max-width: 48em) and (min-width: 30em) {
+    .nav-icon {
+      font-size: 1.75em;
+      margin-left: 0; } }
+  @media (max-width: 48em) {
+      .nav-icon:before {
+        background: #b6c57a;
+        box-shadow: 0 0.35em 0 0 #b6c57a;
+        content: "";
+        position: absolute;
+        height: 0.15em;
+        left: 0;
+        top: 0.25em;
+        width: 1.15em; }
+      .nav-icon:after {
+        background: #b6c57a;
+        box-shadow: 0 0.7em 0 0 #b6c57a;
+        content: "";
+        height: 0.15em;
+        left: 0;
+        position: absolute;
+        top: 0.25em;
+        width: 1.15em; }
+      .nav-icon:hover {
+        color: #a3b656; } }
+
+@media (max-width: 48em) {
+  .primary-nav {
+    background: #2d3234;
+    /* Fallback Color */
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e453e), to(#2d3234));
+    /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #3e453e, #2d3234);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background: -moz-linear-gradient(top, #3e453e, #2d3234);
+    /* FF3.6 */
+    background: -ms-linear-gradient(top, #3e453e, #2d3234);
+    /* IE10 */
+    background: -o-linear-gradient(top, #3e453e, #2d3234);
+    /* Opera 11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3e453e', EndColorStr='#2d3234');
+    height: 100%;
+    left: -244px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 244px;
+    z-index: 12;
+    -webkit-transition: left 0.5s ease-out;
+    -moz-transition: left 0.5s ease-out;
+    -o-transition: left 0.5s ease-out;
+    transition: left 0.5s ease-out; } }
+
+@media (min-width: 48em) {
+  .primary-nav {
+    background: #31561f;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 400 1em/1.475 "Georgia", serif;
+    position: relative;
+    text-align: center;
+    width: 100%; } }
+
+@media (max-width: 48em) {
+  .primary-nav.is-open {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll; } }
+
+@media (max-width: 48em) {
+  .primary-nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0; } }
+
+.primary-nav li {
+  display: inline-block; }
+  @media (max-width: 48em) {
+    .primary-nav li {
+      border-bottom: 1px solid #76934C;
+      font-weight: 700;
+      position: relative;
+      width: 100%; } }
+  @media (min-width: 48em) {
+    .primary-nav li {
+      width: 17%; } }
+  @media (min-width: 48em) {
+    .primary-nav li:first-child {
+      display: none; } }
+  @media (min-width: 48em) {
+    .primary-nav li:last-child a {
+      border-right: 0; } }
+
+.primary-nav a {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: .5em 1em;
+  font-weight: 700; }
+  @media (min-width: 48em) {
+    .primary-nav a {
+      border-right: 2px solid #617861;
+      font-size: 1em;
+      font-weight: 500;
+      margin: .5em 0;
+      padding: 0; } }
+  @media (min-width: 60em) {
+    .primary-nav a {
+      font-size: 1.25em;
+      line-height: 1; } }
+  @media (min-width: 48em) {
+    .primary-nav a:hover {
+      color: #b6c57a; } }
+  .primary-nav a.is-active {
+    color: #b6c57a; }
+
+.primary-nav .aw-widget-legal {
+  padding: 0; }
+
+/* The Layer that will be layed over the content so that the content is unclickable while menu is shown */
+@media (max-width: 48em) {
+  .content-layer {
+    background: #383A42;
+    display: none;
+    height: 100%;
+    opacity: .75;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5; } }
+
+@media (max-width: 48em) {
+  .content-layer.is-open {
+    display: block; } }
+
+.nav-weather {
+  margin-top: .5em; }
+  @media (min-width: 48em) {
+    .nav-weather {
+      display: none; } }
 

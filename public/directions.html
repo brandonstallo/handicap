@@ -1,0 +1,26 @@
+﻿<h2>Directions</h2>
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="course-info directions l-text-content">
+    <h3>Our Address</h3>
+    <span class="course-info-name">Salisbury Golf Course</span>
+    <span itemprop="streetAddress" class="course-info-street">35593 Potts Park Rd.</span>
+    <span itemprop="addressLocality" class="course-info-city">Salisbury,</span>
+    <span itemprop="addressRegion" class="course-info-state">MO</span>
+    <span itemprop="postalCode" class="course-info-zip">65281</span>
+
+
+    <div class="get-directions">
+        <form action="http://maps.google.com/maps" method="get" target="_blank">
+            <label for="saddr">Enter Your Address</label>
+            <input required type="text" name="saddr" placeholder="Street Address & City" />
+            <input type="hidden" name="daddr" value="39.404803, -92.805673" />
+            <div class="action-container">
+                <button class="primary-button" type="submit">Get Directions</button>
+                <!--<a data-current-location class="current-location" href="#" target="_blank">Use my current location</a>-->
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="l-main-image directions">
+    <div id="map"></div>
+</div>

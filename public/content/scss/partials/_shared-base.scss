@@ -1,0 +1,581 @@
+﻿/// <reference path="mixins" />
+/// <reference path="themes/darkGreenTheme" />
+@import "mixins";
+@import "themes/darkGreenTheme";
+
+body {
+    box-sizing: border-box;
+    color: pink;
+    font: $base-font;
+    position: relative;
+
+    &.is-open {
+        overflow: hidden;
+    }
+}
+
+.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+
+    &:focus, &:active {
+        background-color: rgba(0, 0, 0, .75);
+        border-radius: 4px;
+        border: 4px solid $action;
+        color: $base;
+        font-size: 1.25em;
+        font-family: $base-font;
+        height: auto;
+        left: auto;
+        margin: 1em 12%;
+        overflow: auto;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        top: auto;
+        width: 70%;
+        z-index: 999;
+
+        @media (min-width:$break-medium) {
+            margin: 1em 35%;
+            width: 30%;
+        }
+    }
+}
+
+/*.container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include transition(left 0.5s ease-out);
+
+    &.is-hidden {
+        @media (max-width: $break-medium) {
+            left: 244px;
+        }
+    }
+}*/
+
+header {
+    background: $primary;
+    padding: .5em;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 9;
+    @include box-sizing(border-box);
+
+    @media (min-width: $break-small) {
+        padding: .75em;
+    }
+
+    @media (min-width: $break-medium) {
+        background: #FFF;
+        margin-bottom: .5em;
+        padding: .25em;
+    }
+
+    a, a:visited {
+        color: $base;
+    }
+}
+
+.logo {
+    @media (max-width: $break-medium) {
+        display: none;
+    }
+
+    max-width: 90px;
+    vertical-align: top;
+}
+
+h1 {
+    color: $primary;
+    display: inline-block;
+    font: $cursive-font;
+    font-size: 1.35em;
+    white-space: nowrap;
+
+    @media (min-width: $break-small) {
+        font-size: 1.75em;
+        margin-left: .5em;
+    }
+
+    @media (min-width: $break-medium) {
+        color: $primary;
+        font-size: 3.25em;
+        margin: 0.25em 0 0 .25em;
+        vertical-align: top;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: .5em;
+
+        @media (min-width: $break-medium) {
+            margin-left: .25em;
+        }
+
+        &:visited {
+            color: $base;
+
+            @media (min-width: $break-medium) {
+                color: $primary;
+            }
+        }
+    }
+}
+
+h2 {
+    color: $primary;
+    font: $serif-font;
+    font-size: 1.75em;
+    margin: .5em 0 .75em;
+
+    @media (min-width:$break-medium) {
+        font-size: 2.25em;
+    }
+}
+
+h3 {
+    border-bottom: 1px solid $content-standard;
+    font: $serif-font;
+    font-size: 1.15em;
+    margin: .75em 0 .5em;
+}
+
+h5 {
+    font-size: .85em;
+    font-weight: 700;
+    margin: .5em 0 1em;
+}
+
+a, a:visited {
+    color: $action;
+    cursor: pointer;
+}
+
+p {
+    margin: .5em 0 .75em;
+}
+
+ul {
+    margin: 1em 0;
+    padding: 0 2em;
+
+    &.latest-news-list {
+        padding: 0;
+    }
+}
+
+li {
+    list-style-type: disc;
+
+    .latest-news-list & {
+        list-style-type: none;
+    }
+}
+
+table {
+    border: 1px solid $primary;
+    margin: 2em 0;
+    width: 100%;
+}
+
+thead {
+    background: #FBFBFB;
+
+    td {
+        color: $primary;
+        font-weight: 700;
+        padding: .5em;
+
+        @media (min-width:$break-large) {
+            font-size: 1.25em;
+        }
+    }
+}
+
+tbody {
+    td {
+        border: 1px solid $primary;
+        padding: .5em;
+        width: 50%;
+
+        &.heading {
+            font-style: italic;
+            font-weight: 700;
+        }
+    }
+}
+
+b {
+    font-weight: 700;
+}
+
+input {
+    box-sizing: border-box;
+    display: block;
+    height: 2.25em;
+    margin: .15em 0 .25em;
+    padding-left: .25em;
+    width: 100%;
+}
+
+form {
+    transition: all linear 0.5s;
+    background: transparent;
+    /*&.ng-invalid {
+        background: red;
+    }*/
+}
+
+input, button {
+    display: block;
+}
+
+.fake-button {
+    background: 0;
+    border: 0;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.team {
+
+    &-list-item {
+        margin: .5em;
+    }
+
+    &-name {
+        font-size: 1.25em;
+        text-align: left;
+        width: 85%;
+    }
+
+    &-remove {
+        &:hover {
+            color: lighten(#333, 30%)
+        }
+    }
+}
+
+
+.l-main-content {
+    box-sizing: border-box;
+    clear: both;
+    margin: .5em auto 0;
+    max-width: 40em;
+    min-height: 10em;
+    overflow: hidden;
+    padding: .5em;
+    width: 100%;
+
+    @media (min-width: $break-medium) {
+        margin-top: 1.5em;
+        max-width: 80em;
+        min-height: 20em;
+        width: 95%;
+    }
+}
+
+.l-main-image {
+    border: 1px solid $content-standard;
+    display: block;
+    margin: 1em auto;
+    max-width: 700px;
+    padding: .25em;
+    width: 95%;
+
+    @media (min-width:$break-medium) {
+        margin: 1em 0;
+    }
+}
+
+.l-text-content {
+    margin: 0 1em;
+
+    @media (min-width:$break-medium) {
+        display: inline-block;
+        margin: 3em 0 1em 1em;
+        max-width: none;
+        vertical-align: top;
+        width: 48%;
+    }
+}
+
+.action-container {
+    box-sizing: border-box;
+    margin: 2em auto 1em;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.primary-button {
+    background: $primary;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid $tertiary;
+    color: $base;
+    display: block;
+    font: $base-font;
+    margin: .5em 0;
+    padding: .25em .75em;
+    width: 100%;
+}
+
+
+.note {
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+.download-scorecard {
+    margin: 1em .5em;
+}
+
+.course-info {
+    display: block;
+    margin: 1em auto 0;
+    text-align: center;
+    width: 11em;
+
+    &-name, &-street {
+        display: block;
+    }
+
+    &-phone {
+        display: inline-block;
+    }
+}
+
+.secondary-nav {
+    margin: 1.5em 0 0;
+    text-align: center;
+    white-space: nowrap;
+
+    li {
+        display: inline-block;
+        border-left: 1px solid #CCC;
+        padding: 0 .5em;
+
+        @media (min-width:$break-medium) {
+            padding: 0 1em;
+        }
+
+        @media (min-width:$break-large) {
+            padding: 0 2em;
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+
+    a {
+        color: $primary;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:visited {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.social-media {
+    display: inline-block;
+    margin: 0 .5em;
+    text-decoration: none;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    h5 {
+        @media (min-width:$break-large) {
+            margin-bottom: .5em;
+        }
+    }
+
+    &-container {
+        display: block;
+        margin: 1.5em auto 0;
+        text-align: center;
+
+        @media (min-width:$break-large) {
+            position: absolute;
+            top: 1em;
+            right: 6%;
+            margin: 0;
+        }
+
+        @media (min-width:$break-xlarge) {
+            right: 12.5%;
+        }
+    }
+
+    &-icon {
+        border-radius: .1em;
+        display: inline-block;
+        max-width: 40px;
+
+        @media (min-width:$break-large) {
+            max-width: 30px;
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid $footerBorder-light;
+    clear: both;
+    @include linear-gradient($footerBackground-light, $footerBackground-dark);
+    margin-top: 2em;
+    position: relative;
+
+    @media screen and (min-width: $break-large) {
+        min-height: initial;
+    }
+
+
+    ul.footer-menu {
+        width: 90%;
+        margin: 1em auto 0;
+
+        @media screen and (min-width: $break-medium) {
+            width: 70%;
+        }
+
+        @media screen and (min-width: $break-large) {
+            max-width: 660px;
+        }
+
+        li {
+            margin: 1em 0;
+            padding: 0.5em 0;
+            display: inline-block;
+            width: 32%;
+            text-align: center;
+            border-right: 1px solid $footerNavLink-border;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            a {
+                color: $footerTextLinks;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+
+    small {
+        font-weight: $regular;
+        font-size: .65em;
+        display: block;
+        margin: 3em auto 0;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+    ul.course-info {
+        text-align: center;
+        font-weight: $regular;
+        line-height: 1.25em;
+        margin-top: 1em;
+
+        li {
+            color: $paragraph-text;
+            font-size: .85em;
+
+            &:last-child {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .footer-to-top {
+        background-color: $primary;
+        @include border-radius(.75em);
+        color: $base;
+        display: block;
+        padding: .75em 0;
+        margin: 2em auto 0;
+        width: 7em;
+        text-align: center;
+        font-size: 0.85em;
+
+        @media screen and (min-width: $break-medium) {
+            display: none;
+        }
+    }
+}
+
+.calendar {
+
+    &-container {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        margin: 1em auto;
+        overflow: hidden;
+        max-width: 950px;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.scorecard {
+    .l-main-image {
+        @media (min-width:$break-medium) {
+            margin: 1em auto;
+            max-width: 900px;
+        }
+    }
+
+    &.l-text-content {
+        @media (min-width:$break-medium) {
+            display: block;
+            margin: 3em auto 1em;
+            width: 65%;
+        }
+    }
+}
+
+.rates {
+    margin: 2em auto;
+    max-width: 950px;
+}
+
+
+/*.ng-enter {
+    animation: all 10.25s ease-in;
+}
+
+.ng-leave {
+    animation: all 10.25s ease-out;
+}*/

@@ -1,0 +1,25 @@
+@import "mixins";
+//@import "../themes/darkGreenTheme";
+
+.l-text-content {
+
+    &.about-us {
+        @media (min-width:$break-medium) {
+            vertical-align: top;
+            margin: 2em 4% 0 0;
+        }
+    }
+}
+
+.l-main-image {
+    &.about-us {
+        border: none;
+        max-width: 400px;
+
+        @media (min-width:$break-medium) {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}

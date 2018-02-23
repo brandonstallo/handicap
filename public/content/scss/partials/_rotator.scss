@@ -1,0 +1,11 @@
+/// <reference path="mixins" />
+/// <reference path="../themes/darkGreenTheme" />
+
+.rotator {
+    padding: 0;
+
+    &-image {
+        display: none;
+        width: 100%;
+    }
+}
