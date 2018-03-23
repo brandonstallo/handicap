@@ -4,21 +4,21 @@
 
     angular
         .module('app')
-        .controller('MainController', MainController);
+        .controller('RatesController', RatesController);
 
 
 
-    function MainController() {
+    function RatesController() {
 
         var vm = this;
-        this.pageTitle = "Main";
+        this.pageTitle = "Rates";
 
 
         activate();
 
         function activate() {
 
-            console.log('main controller');
+            console.log('Rates controller');
         }
 
     }

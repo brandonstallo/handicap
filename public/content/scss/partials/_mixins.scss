@@ -9,7 +9,7 @@ $serif-font : 400 1em/1.475 "Georgia", serif;
 
 // Media Queries
 $break-small: 30em;
-$break-medium: 48em;
+$break-medium: 768px;
 $break-large: 60em;
 $break-xlarge: 80em;
 
@@ -67,4 +67,27 @@ $break-xlarge: 80em;
   &:after {
     clear: both;
   }
+}
+
+$mq-supported: true !default; // this makes this stylesheet output media queries from our mixin
+
+
+@mixin mq($measurement, $type: min-width, $mq-support: $mq-supported) {
+    @if $mq-support == true {
+        // output the mixin content inside of a media query
+        @if $measurement == "print" {
+            @media print {
+                @content;
+            }
+        }
+        @else {
+            @media all and (#{$type}: $measurement), print {
+                @content;
+            }
+        }
+    }
+    @elseif $measurement != "print" {
+        // output ALL the style content inside the mixin, without a media query
+        @content;
+    }
 }

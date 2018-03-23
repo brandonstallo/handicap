@@ -1,26 +1,22 @@
 ﻿<!DOCTYPE html>
-<!-- define angular app -->
-<html ng-app="app" lang="en" itemscope itemtype="https://schema.org/WebPage" data-ng-controller="MainController as main" data-ng-cloak>
+<html data-ng-app="app" data-ng-cloak>
 <head prefix="og: https://ogp.me/ns#">
+    <base href="/" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Salisbury Golf Course">
-    <meta name="description" content="Salisbury Golf Course is great 9 hole public golf course located in Salisbury, MO.">
-    <meta name="keywords" content="Salisbury, Municipal, Missouri, Golf, Golf Course, Course, 9-Hole, Tournaments" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="theme-color" content="#475c29">
+    <meta name="description" content="{{pageDescription}}">
+    <meta name="keywords" content="Salisbury Golf Course,Salisbury, Municipal, Missouri, Golf, Golf Course, Golf Courses, Course, Courses, 9-Hole, 18-Hole, Tournaments, Scrambles, " />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#31561f">
     <meta name="msvalidate.01" content="42EB9BC4B6636EB5F67CFCB4904AB07E" />
-    <meta itemprop="email" content="salisburygolfcourse@gmail.com">
     <meta name="fragment" content="!" />
 
     <link rel="canonical" href="https://www.salisburygolfcourse.com/">
 
-
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">-->
-
     <meta property="og:title" content="Salisbury Golf Course" />
     <meta property="og:type" content="business.business" />
     <meta property="og:image" content="https://www.salisburygolfcourse.com/images/7-wide.jpg" />
@@ -33,15 +29,13 @@
     <meta property="business:contact_data:postal_code" content="65281" />
     <meta property="business:contact_data:country_name" content="United States" />
     <meta property="business:contact_data:email" content="salisburygolfcourse@gmail.com" />
-    <meta property="business:contact_data:phone_number" content="1-660-388-5721" />
+    <meta property="business:contact_data:phone_number" content="+1-660-388-5721" />
     <meta property="business:contact_data:website" content="https://www.salisburygolfcourse.com" />
     <meta property="place:location:latitude" content="39.398679" />
     <meta property="place:location:longitude" content="-92.806975" />
 
     <!--[if IE]> <link rel="shortcut icon" sizes="16x16 32x32 48*48 64x64" href="https://www.salisburygolfcourse.com/content/images/icon-square.png"><![endif]-->
     <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
     <meta name="msapplication-TileColor" content="#475c29">
     <meta name="msapplication-TileImage" content="https://www.salisburygolfcourse.com/content/images/icon-square.png">
 
@@ -52,65 +46,114 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@salisbury_golf">
     <meta name="twitter:title" content="Salisbury Golf Course">
     <meta name="twitter:description" content="Salisbury Golf Course, located in Salisbury, MO, is a 9-Hole, Par 35 public Golf Course measuring nearly 3,000 yards from the back tees.">
     <meta name="twitter:image" content="https://www.salisburygolfcourse.com/content/images/7-square.jpg">
 
-    <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json">
-
-    <!-- Add to homescreen for Chrome on Android -->
+    <script type="application/ld+json">
+        [{"@context": "http://www.schema.org","@type": "WebSite","url": "https://www.salisburygolfcourse.com","name": "Salisbury Golf Course","copyrightYear": "2016"},{"@context": "http://www.schema.org","@type": "LocalBusiness","name": "Salisbury Golf Course","url": "https://www.salisburygolfcourse.com","logo": "https://www.salisburygolfcourse.com/content/images/logo.png","image": "https://www.salisburygolfcourse.com/content/images/8.jpg","foundingDate": "1983","telephone" : "+1-660-388-5721","address": {"@type": "PostalAddress","streetAddress": "35593 Potts Park Rd.","addressLocality": "Salisbury","addressRegion": "MO","postalCode": "65281"},"priceRange": "$10 - $40","openingHours": ["Mo-Fri 10:00 a.m. - 7:00 p.m.", "Sat-Sun 8:00 a.m. - 8:00 p.m."],"publicAccess": true}]"sameAs":["https://www.facebook.com/SalisburyGolfCourse/","https://twitter.com/salisbury_golf",]
+    </script>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Salisbury Golf Course">
     <link rel="icon" sizes="192x192" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
-    <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#475c29">
     <meta name="apple-mobile-web-app-title" content="Salisbury Golf Course">
     <link rel="apple-touch-icon" href="https://www.salisburygolfcourse.com/content/images/icon-square.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="https://www.salisburygolfcourse.com/content/images/icon-square.png">
     <meta name="msapplication-TileColor" content="#475c29">
-
-
-    <style media="all">
+    <title data-ng-bind="pageTitle + ' | Salisbury Golf Course'"></title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <style media="screen">
+       body{box-sizing:border-box;margin:0;padding:0}h1{color:#31561f;display:inline-block;font-weight:400;font-style:italic;font-family:'Playfair Display',serif;font-size:1.2em;line-height:1.5;white-space:nowrap}h1 a,h1 a:hover{text-decoration:none}h1 a:visited{color:#31561f;text-decoration:none}h2{color:#31561f;font:400 1em/1.475 Georgia,serif;font-size:1.75em;margin:.5em 0 .75em}h3{border-bottom:1px solid #000;font:400 1em/1.475 Georgia,serif;font-size:1.15em;margin:.75em 0 .5em}h5{font-size:.85em;font-weight:700;margin:.5em 0 1em}ul{list-style:none}.skip-main{display:none}.navbar-header{position:relative}.navbar-logo{max-width:30px;vertical-align:top}.navbar-brand{padding:.5em}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}footer{border-top:1px solid #CECECE;clear:both;background:#F8F8F8;margin-top:2em;position:relative}.footer-menu{margin:1em auto 0}.footer-menu li{margin:1em 0;padding:.5em 0;display:inline-block;width:32%;text-align:center;border-left:1px solid #CECECE}li:first-child{border-left:none}a{color:#143600;text-decoration:none}small{font-weight:400;font-size:.65em;display:block;margin:3em auto 0;text-align:center;padding-bottom:1em}.social-media-container h5{display:none}.course-info{text-align:center;font-weight:400;line-height:1.25em;margin-top:1em}.course-info-name,.course-info-street,.course-info-phone{display:block}.footer-to-top{background-color:#31561f;border-radius:.75em;color:#FFF;display:block;padding:.75em 0;margin:2em auto 0;width:7em;text-align:center;font-size:.85em}
     </style>
-
-    <base href="/" />
-
+    <link href="content/css/styles.min.css?1" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
-    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.min.js"></script>-->
-
-    <script src="content/scripts/app.js"></script>
-    <script src="content/scripts/app-routes.js"></script>
-    <script src="content/scripts/controller/mainController.js"></script>
-    <script src="content/components/home/home-controller.js"></script>
-
-    <title ng-bind="pageTitle + ' | Salisbury Golf Course'"></title>
-
-    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-
+    <script  src="content/scripts/app.js"></script>
+    <script   src="content/scripts/controller/homeController.js"></script>
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img class="navbar-logo" alt="Salisbury Golf Course Logo" title="Salisbury Golf Course Logo" src="https://www.salisburygolfcourse.com/content/images/logo.png" />
+                    </a>
+                    <h1 class="navbar-text"><a href="/">Salisbury Golf Course</a></h1>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="calendar">Calendar</a></li>
+                        <li><a href="directions">Directions</a></li>
+                        <li><a href="rates">Rates</a></li>
+                        <li><a href="scorecard">Scorecard</a></li>
+                        <li><a href="weather">Weather</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main tabindex="-1" class="l-main-content container" data-ng-view></main>
+    <footer>
+        <nav class="footer-menu secondary-nav" data-secondary-nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#directions">Directions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media-container">
+            <h5>Find Us On Social Media</h5>
+            <a class="social-media-icon fa-facebook fab" target="_blank" href="https://www.facebook.com/SalisburyGolfCourse/"></a>
+            <a class="social-media-icon fa-twitter fab" target="_blank" href="https://twitter.com/salisbury_golf"></a>
+        </div>
+        <div class="course-info">
+            <span class="course-info-name">Salisbury Golf Course</span>
+            <span class="course-info-street">35593 Potts Park Rd.</span>
+            <span class="course-info-city">Salisbury,</span>
+            <span class="course-info-state">MO</span>
+            <span class="course-info-zip">65281</span>
+            <a href="tel:1-660-388-5721" class="course-info-phone">(660) 388-5721</a>
+        </div>
+        <small>
+            Copyright &copy;
+            <script>var d = new Date();var currentYear = d.getFullYear();document.write(currentYear);</script> 
+            Salisbury Golf Course
+        </small>
+    </footer>
+    <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script  src="content/scripts/config-routes.js"></script>
+    <script  src="content/scripts/bootstrap.min.js"></script>
+    <!--<!-- FireBase -->
+    <!--<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>-->
     <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBMbXX6RWQRhtAZ8CD9kui--DGcV9LxxB4",
-            authDomain: "smgc-1487256758030.firebaseapp.com",
-            databaseURL: "https://smgc-1487256758030.firebaseio.com",
-            projectId: "smgc-1487256758030",
-            storageBucket: "smgc-1487256758030.appspot.com",
-            messagingSenderId: "401455718840"
-        };
-        firebase.initializeApp(config);
-    </script>
-
+    <!--<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>-->
+    <!--<script>
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyBMbXX6RWQRhtAZ8CD9kui--DGcV9LxxB4",
+                    authDomain: "smgc-1487256758030.firebaseapp.com",
+                    databaseURL: "https://smgc-1487256758030.firebaseio.com",
+                    projectId: "smgc-1487256758030",
+                    storageBucket: "smgc-1487256758030.appspot.com",
+                    messagingSenderId: "401455718840"
+                };
+                firebase.initializeApp(config);
+    </script>-->
     <!--Firebase defaults COME BACK TO THESE -->
     <!-- update the version number as needed -->
     <!--<script defer src="/__/firebase/4.9.1/firebase-app.js"></script>-->
@@ -122,99 +165,6 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <!--<script defer src="/__/firebase/init.js"></script>-->
 
-
-    <link href="content/css/styles.min.css" rel="stylesheet" />
-    <link href="content/css/font-awesome/fontawesome.min.css" rel="stylesheet" />
-    <link href="content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="content/css/font-awesome/fontawesome-all.min.css" rel="stylesheet" />
-</head>
-<!-- define angular controller -->
-<body>
-
-    <a class="skip-main" href="#main">Skip to main content</a>
-    <div itemscope itemtype="https://schema.org/LocalBusiness" class="container" data-main-content>
-        <header>
-            <div class="nav-icon" data-nav-icon>Menu</div>
-            <a itemprop="url" href="/">
-                <img itemprop="logo" class="logo" src="https://www.salisburygolfcourse.com/content/images/logo.png" alt="Salisbury Golf Course Logo" title="Salisbury Golf Course Logo" />
-            </a>
-            <h1>
-                <a href="/">Salisbury Golf Course</a>
-            </h1>
-        </header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="calendar">Calendar</a></li>
-                    <li><a href="directions">Directions</a></li>
-                    <li><a href="rates">Rates &amp; Fees</a></li>
-                    <li><a href="scorecard">Scorecard</a></li>
-                    <li><a href="weather">Weather</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <main tabindex="-1" class="l-main-content" data-ng-view>
-
-    </main>
-
-    <footer>
-        <nav class="secondary-nav" data-secondary-nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#directions">Directions</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-        </nav>
-
-        <div class="social-media-container">
-            <h5>Find Us On Social Media</h5>
-            <a class="social-media" target="_blank" href="https://www.facebook.com/SalisburyGolfCourse/">
-                <img class="social-media-icon facebook" src="/content/images/facebook-icon.png" alt="Like Us On Facebook" title="Like Us On Facebook" />
-            </a>
-            <a class="social-media" target="_blank" href="https://twitter.com/salisbury_golf">
-                <img class="social-media-icon twitter" src="/content/images/twitter-icon.png" alt="Follow Us On Twitter" title="Follow Us On Twitter" />
-            </a>
-        </div>
-
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="course-info">
-            <span class="course-info-name">Salisbury Golf Course</span>
-            <span itemprop="streetAddress" class="course-info-street">35593 Potts Park Rd.</span>
-            <span itemprop="addressLocality" class="course-info-city">Salisbury,&nbsp;</span>
-            <span itemprop="addressRegion" class="course-info-state">MO&nbsp;</span>
-            <span itemprop="postalCode" class="course-info-zip">65281</span>
-            <a itemprop="telephone" href="tel:1-660-388-5721" class="course-info-phone">(660) 388-5721</a>
-        </div>
-        <small>
-            Copyright &copy;
-            <script>
-                var d = new Date();
-                var currentYear = d.getFullYear();
-                document.write(currentYear);
-
-            </script> Salisbury Golf Course
-        </small>
-    </footer>
-
-    <script>
-                (function(i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function() {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-                ga('create', 'UA-79623537-1', 'auto');
-                ga('send', 'pageview');
-
-    </script>
+    <script>!function(a, b, c, d, e, f, g) { a.GoogleAnalyticsObject = e, a[e] = a[e] || function() { (a[e].q = a[e].q || []).push(arguments) }, a[e].l = 1 * new Date, f = b.createElement(c), g = b.getElementsByTagName(c)[0], f.async = 1, f.src = d, g.parentNode.insertBefore(f, g) }(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-79623537-1", "auto"), ga("send", "pageview");</script>
 </body>
 </html>

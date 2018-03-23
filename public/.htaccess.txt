@@ -3,7 +3,8 @@
 
 ExpiresActive On
 
-ExpiresByType images/logo.png "access 1 year"
+ExpiresByType images/png "access 1 year"
+ExpiresByType text/css "access 1 month"
 
 </IfModule>
 ## EXPIRES CACHING ##

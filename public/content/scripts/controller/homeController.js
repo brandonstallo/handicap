@@ -1,23 +1,26 @@
 ﻿(function() {
 
+    'use strict';
+
     angular
         .module('app')
         .controller('HomeController', HomeController);
 
+
+
     function HomeController() {
+
         var vm = this;
-        this.pageTitle = "Homes";
+        this.pageTitle = "Home";
+
 
         activate();
 
-
         function activate() {
-            console.log('home-controllersddss');
-            vm.message = "home";
+
+            console.log('Home controller');
         }
 
     }
-
-
 
 })();
